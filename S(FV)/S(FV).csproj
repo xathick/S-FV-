@@ -74,7 +74,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Client\GUI\" />
+    <Folder Include="Client-Movile\GUI\" />
+    <Folder Include="Client-PC\GUI\" />
     <Folder Include="Data\" />
     <Folder Include="Server\GUI\" />
   </ItemGroup>

@@ -9,12 +9,14 @@ namespace S_FV_.Structures
     class Persona
     {
         #region Parametros
+        String idPersona;
         String nombre;
         String apellido1;
         String apellido2;
         String telefono;
         String email;
         DateTime fechaNacimiento;
+        String idParroquia;
         #endregion
 
         #region Encapsulated Fields
@@ -95,6 +97,32 @@ namespace S_FV_.Structures
                 fechaNacimiento = value;
             }
         }
+
+        public string IdParroquia
+        {
+            get
+            {
+                return idParroquia;
+            }
+
+            set
+            {
+                idParroquia = value;
+            }
+        }
+
+        public string IdPersona
+        {
+            get
+            {
+                return idPersona;
+            }
+
+            set
+            {
+                idPersona = value;
+            }
+        }
         #endregion
 
         /// <summary>
@@ -102,6 +130,8 @@ namespace S_FV_.Structures
         /// </summary>
         public Persona()
         {
+            this.IdPersona = null;
+            this.IdParroquia = null;
             this.nombre = null;
             this.apellido1 = null;
             this.apellido2 = null;
@@ -118,14 +148,16 @@ namespace S_FV_.Structures
         /// <param name="telefono">Telefono de la persona</param>
         /// <param name="email">Email de la persona</param>
         /// <param name="fechaNacimiento">Fecha de nacimiento de la persona</param>
-        public Persona(String nombre, String apellido1, String apellido2, String telefono, String email, DateTime fechaNacimiento)
+        public Persona(String idPersona, String nombre, String apellido1, String apellido2, String telefono, String email, DateTime fechaNacimiento, String idParroquia)
         {
+            this.idPersona = idPersona;
             this.nombre = nombre;
             this.apellido1 = apellido1;
             this.apellido2 = apellido2;
             this.telefono = telefono;
             this.email = email;
             this.fechaNacimiento = fechaNacimiento;
+            this.idParroquia = idParroquia;
         }
 
         /// <summary>

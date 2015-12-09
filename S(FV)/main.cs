@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace S_FV_
 {
-    static class Program
+    static class main
     {
         /// <summary>
         /// The main entry point for the application.
@@ -14,9 +14,7 @@ namespace S_FV_
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+           
         }
     }
 }

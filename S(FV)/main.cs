@@ -7,10 +7,10 @@ namespace S_FV_
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
-        static void Main()
-        {
+        //[STAThread]
+        //static void Main()
+        //{
            
-        }
+        //}
     }
 }

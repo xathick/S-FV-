@@ -7,8 +7,8 @@ namespace S_FV_.Structures
         #region Parametros
         String nombre;
         String pass;
-        Parroquia idParroquia;
-        Persona idPersona;
+        Parroquia parroquia;
+        Persona persona;
         #endregion
 
         #region Encapsulated Fields
@@ -42,12 +42,12 @@ namespace S_FV_.Structures
         {
             get
             {
-                return idPersona;
+                return persona;
             }
 
             set
             {
-                idPersona = value;
+                persona = value;
             }
         }
         #endregion
@@ -59,7 +59,7 @@ namespace S_FV_.Structures
         {
             this.nombre = null;
             this.pass = null;
-            this.idPersona = null;
+            this.persona = null;
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace S_FV_.Structures
         {
             this.nombre = nombre;
             this.pass = pass;
-            this.idPersona = idPersona;
+            this.persona = idPersona;
         }
 
     }

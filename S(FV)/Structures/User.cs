@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace S_FV_
+namespace S_FV_.Structures
 {
     class User
     {
         #region Parametros
         String nombre;
         String pass;
-        String idParroquia;
-        String idPersona;
+        Parroquia idParroquia;
+        Persona idPersona;
         #endregion
 
         #region Encapsulated Fields
@@ -38,7 +38,7 @@ namespace S_FV_
             }
         }
 
-        public string IdPersona
+        public Persona IdPersona
         {
             get
             {
@@ -68,7 +68,7 @@ namespace S_FV_
         /// <param name="nombre">Nombre del usuario</param>
         /// <param name="pass">Contraseña del usuario</param>
         /// <param name="idPersona">Vinculo con el objeto Persona correspondiente</param>
-        public User(String nombre, String pass, String idPersona)
+        public User(String nombre, String pass, Persona idPersona)
         {
             this.nombre = nombre;
             this.pass = pass;

@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structures\Finanzas.cs" />
+    <Compile Include="Structures\Grupo.cs" />
+    <Compile Include="Structures\Movimiento.cs" />
     <Compile Include="Structures\Parroquia.cs" />
     <Compile Include="Structures\Persona.cs" />
     <Compile Include="Structures\User.cs" />

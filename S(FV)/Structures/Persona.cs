@@ -5,14 +5,13 @@ namespace S_FV_.Structures
     class Persona
     {
         #region Parametros
-        String idPersona;
         String nombre;
         String apellido1;
         String apellido2;
         String telefono;
         String email;
         DateTime fechaNacimiento;
-        String idParroquia;
+        Parroquia parroquia;
         #endregion
 
         #region Encapsulated Fields
@@ -94,31 +93,20 @@ namespace S_FV_.Structures
             }
         }
 
-        public string IdParroquia
+        public Parroquia Parroquia
         {
             get
             {
-                return idParroquia;
+                return parroquia;
             }
 
             set
             {
-                idParroquia = value;
+                parroquia = value;
             }
         }
 
-        public string IdPersona
-        {
-            get
-            {
-                return idPersona;
-            }
-
-            set
-            {
-                idPersona = value;
-            }
-        }
+        
         #endregion
 
         /// <summary>
@@ -126,14 +114,13 @@ namespace S_FV_.Structures
         /// </summary>
         public Persona()
         {
-            this.IdPersona = null;
-            this.IdParroquia = null;
+            this.parroquia = null;
             this.nombre = null;
             this.apellido1 = null;
             this.apellido2 = null;
             this.telefono = null;
             this.email = null;
-            this.fechaNacimiento = new DateTime(1,1,1);
+            this.fechaNacimiento = new DateTime();
         }
 
         /// <summary>
@@ -144,16 +131,15 @@ namespace S_FV_.Structures
         /// <param name="telefono">Telefono de la persona</param>
         /// <param name="email">Email de la persona</param>
         /// <param name="fechaNacimiento">Fecha de nacimiento de la persona</param>
-        public Persona(String idPersona, String nombre, String apellido1, String apellido2, String telefono, String email, DateTime fechaNacimiento, String idParroquia)
+        public Persona(String nombre, String apellido1, String apellido2, String telefono, String email, DateTime fechaNacimiento, Parroquia Parroquia)
         {
-            this.idPersona = idPersona;
             this.nombre = nombre;
             this.apellido1 = apellido1;
             this.apellido2 = apellido2;
             this.telefono = telefono;
             this.email = email;
             this.fechaNacimiento = fechaNacimiento;
-            this.idParroquia = idParroquia;
+            this.parroquia = Parroquia;
         }
 
         /// <summary>

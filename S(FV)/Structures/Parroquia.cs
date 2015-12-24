@@ -5,23 +5,11 @@ namespace S_FV_.Structures
     class Parroquia
     {
         #region Parametros
-        String idParroquia;
         String nombre;
         #endregion
 
         #region Encapsulated Fields
-        public string IdParroquia
-        {
-            get
-            {
-                return idParroquia;
-            }
-
-            set
-            {
-                idParroquia = value;
-            }
-        }
+        
 
         public string Nombre
         {
@@ -42,7 +30,6 @@ namespace S_FV_.Structures
         /// </summary>
         public Parroquia()
         {
-            this.idParroquia = null;
             this.nombre = null;
         }
 
@@ -51,10 +38,9 @@ namespace S_FV_.Structures
         /// </summary>
         /// <param name="idParroquia">id</param>
         /// <param name="nombre"></param>
-        public Parroquia(String idParroquia, String nombre)
+        public Parroquia(String nombre)
         {
             this.nombre = nombre;
-            this.idParroquia = nombre;
         }
     }
 }

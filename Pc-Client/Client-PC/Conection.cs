@@ -22,7 +22,7 @@ namespace S_FV_.Client_PC
                 Console.WriteLine("Connected");
                 Console.Write("Enter the string to be transmitted : ");
 
-                String str = "Connected";
+                String str = "Dirty things";
                 Stream stm = tcpclnt.GetStream();
 
                 ASCIIEncoding asen = new ASCIIEncoding();
@@ -32,7 +32,7 @@ namespace S_FV_.Client_PC
                 stm.Write(ba, 0, ba.Length);
 
                 byte[] bb = new byte[100];
-                int k = stm.Read(bb, 0, 100);
+                int k = stm.Read(ba, 0, 100);
 
                 for (int i = 0; i < k; i++)
                     Console.Write(Convert.ToChar(bb[i]));

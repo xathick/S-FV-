@@ -42,5 +42,9 @@ namespace S_FV_.Structures
         {
             this.nombre = nombre;
         }
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }

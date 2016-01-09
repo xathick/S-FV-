@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace S_FV_.Structures
 {
@@ -6,7 +8,7 @@ namespace S_FV_.Structures
     {
         #region Parametros
         String nombre;
-        String pass;
+        byte[] pass;
         Parroquia parroquia;
         Persona persona;
         #endregion
@@ -25,7 +27,7 @@ namespace S_FV_.Structures
             }
         }
 
-        public string Pass
+        public byte[] Pass
         {
             get
             {
@@ -68,11 +70,29 @@ namespace S_FV_.Structures
         /// <param name="nombre">Nombre del usuario</param>
         /// <param name="pass">Contraseña del usuario</param>
         /// <param name="idPersona">Vinculo con el objeto Persona correspondiente</param>
-        public User(String nombre, String pass, Persona idPersona)
+        public User(String nombre, byte[] pass, Persona idPersona)
         {
             this.nombre = nombre;
             this.pass = pass;
             this.persona = idPersona;
+        }
+
+        public String StringValidation()
+        {
+            return this.nombre+":"+this.pass;
+        }
+        public String StringStore()
+        {
+            return this.nombre + ":" + this.pass.ToString() + ":" + this.persona;
+        }
+        public byte[] GenerateHash(String texto)
+        {
+            byte[] HashValue;
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] MessageBytes = UE.GetBytes(texto);
+            SHA1Managed SHhash = new SHA1Managed();
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            return HashValue;
         }
 
     }

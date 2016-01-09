@@ -74,6 +74,22 @@ namespace S_FV_.Structures
             this.pass = pass;
             this.idPersona = idPersona;
         }
-
+        public String StringValidation()
+        {
+            return this.nombre + ":" + this.pass;
+        }
+        public String StringStore()
+        {
+            return this.nombre + ":" + this.pass.ToString() + ":" + this.persona;
+        }
+        public byte[] GenerateHash(String texto)
+        {
+            byte[] HashValue;
+            UnicodeEncoding UE = new UnicodeEncoding();
+            byte[] MessageBytes = UE.GetBytes(texto);
+            SHA1Managed SHhash = new SHA1Managed();
+            HashValue = SHhash.ComputeHash(MessageBytes);
+            return HashValue;
+        }
     }
 }

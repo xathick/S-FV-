@@ -155,6 +155,9 @@ namespace S_FV_.Structures
             return fecha;
         }
 
-
+        public override string ToString()
+        {
+            return this.Nombre + ":" + this.Apellido1 + ":" + this.Apellido2 + ":" + this.Telefono + ":" + this.Email + ":" + this.FechaNacimiento + ":" + this.Parroquia;
+        }
     }
 }
